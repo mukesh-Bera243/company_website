@@ -11,7 +11,6 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  font-family: 'Segoe UI', sans-serif;
   flex-wrap: wrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }

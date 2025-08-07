@@ -14,7 +14,7 @@ function Header() {
       <nav className="nav-links">
         <a href="#">What We Do</a>
         <a href="#">Who We Are</a>
-        <a href="#">Internship & Product Support</a>
+        <a href="#">Internship & Support</a>
         <a href="#">Careers</a>
       </nav>
 
