@@ -1,5 +1,4 @@
-/* Header.css */
-
+/* === HEADER STYLES === */
 .header {
   background-color: #000;
   color: #fff;
@@ -13,6 +12,13 @@
   z-index: 1000;
   flex-wrap: wrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.header.active {
+  background-color: #1E2222;
+  position: static;  
+  top: auto;  
 }
 
 .header-left {
@@ -45,28 +51,48 @@
   font-weight: 400;
 }
 
+/* === NAVIGATION === */
 .nav-links {
   display: flex;
-  gap: 30px;
-  flex: 1;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.nav-links a {
+.nav-link {
   text-decoration: none;
-  color: white;
+  color: #aaa;
   font-size: 14px;
   font-weight: 500;
-  position: relative;
-  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #00bcd4;
+.nav-link:hover {
+  color: white;
 }
 
+.link-text {
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.link-text.active {
+  color: white;
+  border-bottom: 1.5px solid #00bcd4;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* === CONTACT BUTTON === */
 .header-right {
   display: flex;
   align-items: center;
@@ -88,7 +114,89 @@
   color: #000;
 }
 
-/* Responsive */
+/* === SIDEBAR + CONTENT SECTION === */
+.sidebar-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #1E2222;
+  color: white;
+  padding: 40px 60px;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 260px;
+}
+
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #aaa;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #1c2222;
+  color: white;
+}
+
+.sidebar-item.active {
+  background-color: #2a2f2f;
+  color: white;
+  border-bottom: 1px solid #00bcd4;
+}
+
+.sidebar-item .arrow-icon {
+  font-size: 20px;
+  color: inherit;
+}
+
+.content-section {
+  margin-left: 80px;
+  max-width: 600px;
+}
+
+.content-section h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: transparent;
+  color: white;
+  padding: 12px 24px;
+  border: 2px solid #999;
+  border-radius: 32px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00bcd4;
+  color: #000;
+  border-color: #00bcd4;
+}
+
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 992px) {
   .header {
     flex-direction: column;
@@ -108,5 +216,15 @@
     margin-top: 20px;
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .sidebar-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content-section {
+    margin-left: 0;
+    margin-top: 40px;
   }
 }
