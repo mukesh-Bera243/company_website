@@ -17,86 +17,112 @@ function Header() {
     }
   };
 
-  const data = [
-    {
-      title: 'What We Do',
-      items: ['Customer Stories', 'Events', 'Analyst Recognition', 'Global Studies'],
-      content: [
-        {
-          title: 'Discover why customers choose Us',
-          text: 'We are a digital transformation and technology partner of choice for industry-leading organizations worldwide.',
-          button: 'Read our customer success stories.'
-        },
-        {
-          title: 'Explore our events',
-          text: 'Join our events and webinars to stay ahead with the latest insights and trends.',
-          button: 'View upcoming events'
-        },
-        {
-          title: 'Analyst recognition',
-          text: 'See what industry analysts are saying about TrilokaTech.',
-          button: 'Read analyst reports'
-        },
-        {
-          title: 'Global Studies',
-          text: 'Explore our global studies and see how we are impacting businesses worldwide.',
-          button: 'Read studies'
-        }
-      ]
-    },
-    {
-      title: 'Who We Are',
-      items: ['Our Mission', 'Leadership', 'Diversity', 'Sustainability'],
-      content: [
-        {
-          title: 'Our Mission',
-          text: 'We aim to drive innovation and progress globally through technology.',
-          button: 'Learn more'
-        },
-        {
-          title: 'Leadership',
-          text: 'Meet the people behind our company’s success.',
-          button: 'Meet our leaders'
-        },
-        {
-          title: 'Diversity',
-          text: 'We embrace diversity and inclusion in every aspect.',
-          button: 'Our approach'
-        },
-        {
-          title: 'Sustainability',
-          text: 'Building a sustainable future with responsibility.',
-          button: 'See our efforts'
-        }
-      ]
-    },
-    {
-      title: 'Internship & Support',
-      items: ['Student Programs', 'Guides', 'Training', 'FAQ'],
-      content: [
-        {
-          title: 'Student Programs',
-          text: 'Kickstart your career with our tailored internships.',
-          button: 'Apply now'
-        },
-        {
-          title: 'Guides',
-          text: 'Find everything you need to get started.',
-          button: 'Explore guides'
-        },
-        {
-          title: 'Training',
-          text: 'Enhance your skills through expert-led training.',
-          button: 'Start learning'
-        },
-        {
-          title: 'FAQ',
-          text: 'Have questions? We’ve got answers.',
-          button: 'Read FAQs'
-        }
-      ]
-    }
-  ];
+const data = [
+  {
+    title: 'What We Do',
+    items: ['Customer Stories', 'Events', 'Analyst Recognition', 'Global Studies'],
+    content: [
+      {
+        title: 'Discover why customers choose Us',
+        text: 'We are a digital transformation and technology partner of choice for industry-leading organizations worldwide.',
+        button: 'Read our customer success stories.'
+      },
+      {
+        title: 'Explore our events',
+        text: 'Join our events and webinars to stay ahead with the latest insights and trends.',
+        button: 'View upcoming events'
+      },
+      {
+        title: 'Analyst recognition',
+        text: 'See what industry analysts are saying about TrilokaTech.',
+        button: 'Read analyst reports'
+      },
+      {
+        title: 'Global Studies',
+        text: 'Explore our global studies and see how we are impacting businesses worldwide.',
+        button: 'Read studies'
+      }
+    ]
+  },
+  {
+    title: 'Who We Are',
+    items: ['Our Mission', 'Leadership', 'Diversity', 'Sustainability'],
+    content: [
+      {
+        title: 'Our Mission',
+        text: 'We aim to drive innovation and progress globally through technology.',
+        button: 'Learn more'
+      },
+      {
+        title: 'Leadership',
+        text: 'Meet the people behind our company’s success.',
+        button: 'Meet our leaders'
+      },
+      {
+        title: 'Diversity',
+        text: 'We embrace diversity and inclusion in every aspect.',
+        button: 'Our approach'
+      },
+      {
+        title: 'Sustainability',
+        text: 'Building a sustainable future with responsibility.',
+        button: 'See our efforts'
+      }
+    ]
+  },
+  {
+    title: 'Internship & Support',
+    items: ['Student Programs', 'Guides', 'Training', 'FAQ'],
+    content: [
+      {
+        title: 'Student Programs',
+        text: 'Kickstart your career with our tailored internships.',
+        button: 'Apply now'
+      },
+      {
+        title: 'Guides',
+        text: 'Find everything you need to get started.',
+        button: 'Explore guides'
+      },
+      {
+        title: 'Training',
+        text: 'Enhance your skills through expert-led training.',
+        button: 'Start learning'
+      },
+      {
+        title: 'FAQ',
+        text: 'Have questions? We’ve got answers.',
+        button: 'Read FAQs'
+      }
+    ]
+  },
+  {
+    title: 'Careers',
+    items: ['Job Openings', 'Life at TrilokaTech', 'Benefits', 'Employee Stories'],
+    content: [
+      {
+        title: 'Job Openings',
+        text: 'Explore current openings and find your perfect role.',
+        button: 'View jobs'
+      },
+      {
+        title: 'Life at TrilokaTech',
+        text: 'Discover our culture, values, and work environment.',
+        button: 'Learn more'
+      },
+      {
+        title: 'Benefits',
+        text: 'Enjoy competitive perks and benefits as part of our team.',
+        button: 'See benefits'
+      },
+      {
+        title: 'Employee Stories',
+        text: 'Hear from our people about their journey at TrilokaTech.',
+        button: 'Read stories'
+      }
+    ]
+  }
+];
 
   useEffect(() => {
     if (activeIndex !== null) {
@@ -128,12 +154,10 @@ function Header() {
               <span className={`link-text ${activeIndex === index ? 'active' : ''}`}>
                 {label}
               </span>
-              {label !== "Careers" &&
                 <MdKeyboardArrowDown
                   size={18}
                   className={`arrow-icon ${activeIndex === index ? 'rotate' : ''}`}
                 />
-              }
             </a>
           ))}
         </nav>
@@ -142,7 +166,7 @@ function Header() {
         </div>
       </header>
 
-      {activeIndex !== null && activeIndex !== 3 && (
+      {activeIndex !== null && (
         <div className="sidebar-container">
           <div className="sidebar">
             {data[activeIndex]?.items.map((item, index) => (

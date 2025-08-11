@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 30px;
+  padding: 12px 30px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -125,6 +125,7 @@
   width: 100%;
   box-sizing: border-box;
   position: absolute;
+  z-index: 1000;
 }
 
 .sidebar {
