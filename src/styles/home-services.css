@@ -1,0 +1,141 @@
+.servicesSection {
+  background-color: #fff;
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.servicesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.arrowIcon {
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.arrowIcon:hover {
+  color: #000;
+}
+
+.arrowIcon.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.servicesWrapper {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.servicesSlider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.serviceCard {
+  flex: 0 0 calc(33.333% - 20px);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 400px;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+.cardImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  transition: filter 0.4s ease, transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceCard:hover .cardImage {
+  filter: brightness(0.4) blur(2px);
+}
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+ background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* text at bottom initially */
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.overlay h3,
+.overlay p {
+  margin: 0;
+  transition: transform 0.5s ease;
+}
+
+/* new */
+.serviceCard:hover .cardImage {
+  filter: brightness(0.5) blur(1px);
+}
+
+.serviceCard:hover .overlay {
+  background: rgba(0, 0, 0, 0.6); /* darken entire card */
+  justify-content: flex-start; /* move text to top */
+  padding: 30px; /* optional: more padding for readability */
+}
+
+.serviceCard:hover .overlay h3,
+.serviceCard:hover .overlay p {
+  transform: translateY(0);
+}
+
+.readMoreBtn {
+  margin-top: auto; /* push to bottom */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background: #e55b00;
+}

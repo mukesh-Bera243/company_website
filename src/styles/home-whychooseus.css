@@ -1,0 +1,71 @@
+.whyChooseContainer {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  background-color: #0d0f18;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.leftSection .smallTitle {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.leftSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.leftSection p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.rightSection {
+  flex: 1;
+  background-color: #121827;
+  border-radius: 10px;
+  padding: 40px;       /* increased padding for more space */
+  position: relative;
+  min-height: 350px;   /* increased height */
+}
+
+
+.rightSection h2 {
+  color: #ffc107; /* yellow heading */
+  margin-bottom: 15px;
+}
+
+.rightSection p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 10px;
+}
+
+.arrow {
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+.largeNumber {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.1);
+}
